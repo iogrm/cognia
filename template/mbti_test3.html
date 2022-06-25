@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="../static/16p/main-core--a67684.css">
+    <link rel="stylesheet" href="../static/16p/fonts--141580.css">
+
+    <link rel="stylesheet" href="../static/16p/main-noncore--e55dbe.css">
+
+    <link href="../static/16p/css2" rel="stylesheet">
+    <link rel="stylesheet" href="../static/16p/font-awesome--0d9504.css">
+    <link rel="stylesheet" href="../static/16p/font-awesome--0d9504.css">
+
+    <link rel="stylesheet" href="../static/16p/international--a80427.css">
+    <link href="../static/16p/international--large--4d8654.css" rel="stylesheet"
+          media="screen and (min-width: 768px)">
+
+    <link href="../static/16p/large--21d729.css" rel="stylesheet"
+          media="screen and (min-width: 768px)">
+
+    <link href="../static/16p/print--f081cc.css" rel="stylesheet" media="print">
+
+    <link href="../static/16p/css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body role="document" class="scrolling--dn">
+
+<div id="main-app" class="main-wrapper int fa">
+    <main id="test-app" class="q-pt">
+        <header>
+            <h1>آزمون شخصیت</h1>
+        </header>
+        <div id="main-app">
+            <div>
+                <div data-chunk="quiz-chunk">
+                    <form method='post' action=''>
+                        <div id="progress-wrapper" class="progress-wrapper initial">
+                            <div class="percentage">0%</div>
+                            <div class="progress-bar">
+                                <div class="filler" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <div class="test-questions comp">
+                            {% csrf_token %}
+                            {% for q  in questions %}
+                                <div data-v-2e73c643="" class="question {{ q.is_active }}">
+                                    <div data-v-2e73c643="" class="statement">
+                                        <span data-v-2e73c643="" id="stmt_cecam0mmt6">{{ q.question |safe }}</span>
+                                    </div>
+                                    <div data-v-2e73c643="" role="radiogroup" aria-labelledby="stmt_cecam0mmt6"
+                                         class="decision">
+                                        <div data-v-2e73c643="" class="caption agree">موافقم</div>
+                                        <div data-v-2e73c643="" class="options">
+                                            <div class="option agree max">
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="agree_max">
+                                            </div>
+                                            <div class="option agree med">
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="agree_med">
+                                            </div>
+                                            <div class="option agree min">
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="agree_min">
+                                            </div>
+                                            <div class="option neutral" >
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="neutral">
+                                            </div>
+                                            <div class="option disagree min">
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="disagree_min">
+                                            </div>
+                                            <div class="option disagree med">
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="disagree_med">
+                                            </div>
+                                            <div class="option disagree max">
+                                                <input class="form-check-input" type="radio"
+                                                       name="{{ q.question_id }}"
+                                                       value="disagree_med">
+                                            </div>
+                                        </div>
+                                        <div data-v-2e73c643="" class="caption disagree">مخالفم</div>
+                                    </div>
+                                    <div data-v-2e73c643="" class="decision mobile">
+                                        <div data-v-2e73c643="" class="caption agree">موافقم</div>
+                                        <div data-v-2e73c643="" class="caption disagree">مخالفم</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {#                            <input id='timer' type='hidden' name="timer" value="">#}
+                            <br>
+                            {#                            <button type="submit" class="btn btn-primary">Submit</button>#}
+
+                        </div>
+                        <div class="action-row">
+                            <button type="submit"
+                                    class="sp-button button--action button--purple button--lg button--pill button--fixed button--icon-lt">
+                            <span data-v-5c0ea640=""
+                                  class="sp-icon icon--inherit icon--rotatable icon--dir-lt icon--arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 48 48"
+                                    aria-labelledby="i_xpjpybj9i0"><title id="i_xpjpybj9i0">Back</title> <path
+                                    data-v-5c0ea640=""
+                                    d="M23.296875,3.421875 L22.63125,4.0875 C22.190625,4.528125 22.190625,5.240625 22.63125,5.68125 L39.365625,22.40625 L4.125,22.40625 C3.50625,22.40625 3,22.9125 3,23.53125 L3,24.46875 C3,25.0875 3.50625,25.59375 4.125,25.59375 L39.365625,25.59375 L22.63125,42.328125 C22.190625,42.76875 22.190625,43.48125 22.63125,43.921875 L23.296875,44.5875 C23.7375,45.028125 24.45,45.028125 24.890625,44.5875 L44.68125,24.796875 C45.121875,24.35625 45.121875,23.64375 44.68125,23.203125 L24.890625,3.421875 C24.440625,2.98125 23.7375,2.98125 23.296875,3.421875 Z"></path></svg></span>
+                                <span class="button__text">نتیجه</span> <!----></button> <!----> </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</div>
+</body>
+</html>

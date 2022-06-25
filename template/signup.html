@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <title>Create your account</title>
+    <link rel="icon" href="/static/favicon.ico" >
+    <link rel="stylesheet" href="/static/css/b.css">
+
+</head>
+<body>
+<div id="root">
+    <div class="AgeGate_fullSize__2udcV"></div>
+    <div class="AgeGate_root__13LJW">
+        <div class="AgeGate_leftContainer__3wK9R" role="main" data-optimize-registration-step1-header-container="true">
+            <div class="AgeGate_imgContainer__ulUe9" data-optimize-registration-step1-header-image="true">
+                <picture class="   ">
+                    <source srcset="/static/images/mbti-types.png" type="">
+                    <img class="" src="/static/images/mbti-types.png" alt="fanclubHeader">
+                </picture>
+            </div>
+            <h1 class="AgeGate_benefitsHeader__ATWWc" data-optimize-registration-step1-header-headline="true">Join our
+                community - for free </h1>
+            <div class="AgeGate_benefitsContainer__2nGkp">
+                <div class="AgeGate_benefitRow__YwQhU">
+                    <img class="AgeGate_benefitImageSmall__3UE84"
+                         src="/static/images/question.png"
+                         alt="benefit"
+                         data-optimize-registration-step1-benefit1-image="true">
+                    <h2 class="AgeGate_benefitDescription__1S3hr" data-optimize-registration-step1-benefit1-copy="true">
+                        Recognize your MBTI</h2>
+                </div>
+                <div class="AgeGate_benefitRow__YwQhU">
+                    <img class="AgeGate_benefitImage__3RK11"
+                         src="/static/images/apollo.png"
+                         alt="benefit"
+                         data-optimize-registration-step1-benefit2-image="true">
+                    <h2 class="AgeGate_benefitDescription__1S3hr" data-optimize-registration-step1-benefit2-copy="true">
+                        Know the ancient pattern of yourself</h2>
+                </div>
+                <div class="AgeGate_benefitRow__YwQhU">
+                    <img class="AgeGate_benefitImage__3RK11"
+                         src="/static/images/location.png"
+                         alt="benefit"
+                         data-optimize-registration-step1-benefit3-image="true">
+                    <h2 class="AgeGate_benefitDescription__1S3hr" data-optimize-registration-step1-benefit3-copy="true">
+                        Find out where you should go</h2></div>
+            </div>
+        </div>
+        <div class="AgeGate_rightContainer__1vpOZ" role="main"
+             data-optimize-registration-step1-agegate-container="true">
+            <div class="ProgressBar_headerProgressBar___bCC9 AgeGate_progressBar__2T7nX">
+{#                <span>01</span>#}
+{#                <ul>#}
+{#                    <li class="ProgressBar_progress__20v60 ProgressBar_current__2uw7y"></li>#}
+{#                    <li class=" "></li>#}
+{#                    <li class=" "></li>#}
+{#                </ul>#}
+{#                <span class="ProgressBar_progressTotal__2fQit ">03</span>#}
+            </div>
+            <div class="AgeGate_ageGateHeader__1efp5" data-optimize-registration-step1-agegate-headercopy="true">TO
+                START, ENTER YOUR MBTI
+            </div>
+            <section class="Auth_formContainer__YvSlK VerifyAgeForm_newLayout__3S3ht">
+                <form action="" method="GET">
+                    {% csrf_token %}
+                    <div class="Auth_inputContainer__2yTId VerifyAgeForm_inputContainer__2-6So">
+                        <div class="VerifyAgeForm_dateInput__1h4aM">
+                            <div class="input-container">
+                                <span class="field-label">Your Email</span>
+                                <label class="label-txt" for="dob">
+                                    <input placeholder="enter your email" required=""
+                                           autocomplete="off" type="email" class="input-txt {{ error_css.input_email_class }}"
+                                           id="email" name="email" aria-label="DATE OF BIRTH"
+                                           data-hide="true" value="">
+                                    <span id="email-input-error" class="error-text" style="{{ error_css.span_email_style }}">
+                                        Looks like you already have a My Me Fan Club account with this email.
+                                        <span tabindex="-1">
+                                            <a tabindex="-1" href="/login">Login</a>
+                                        </span>
+                                        instead?</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Auth_inputContainer__2yTId VerifyAgeForm_inputContainer__2-6So">
+                        <div class="VerifyAgeForm_dateInput__1h4aM">
+                            <div class="input-container">
+                                <span class="field-label">Your First Name</span>
+                                <label class="label-txt" for="dob">
+                                    <input placeholder="enter your name" required=""
+                                           autocomplete="off" type="tel" class="input-txt"
+                                           id="first_name" name="first_name"
+                                           data-hide="true" value="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Auth_inputContainer__2yTId VerifyAgeForm_inputContainer__2-6So">
+                        <div class="VerifyAgeForm_dateInput__1h4aM">
+                            <div class="input-container">
+                                <span class="field-label">Your Sir Name</span>
+                                <label class="label-txt" for="dob">
+                                    <input placeholder="enter your sir name" required=""
+                                           autocomplete="off" type="tel" class="input-txt"
+                                           id="sir_name" name="sir_name"
+                                           data-hide="true" value="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Auth_btnContainer__34Wck">
+                        <button type="submit" icon="" data-optimize-registration-step1-agegate-cta-button="true"
+                                id="button" class="Button_btnPrimary2__3V2_p Button_lightPurpleTheme__3eRQd "
+                                style="margin-top: 3px; margin-bottom: 0px;">
+                            <div class="Button_inner__zNO9j" type="Submit" name="submit">JOIN NOW</div>
+                        </button>
+                    </div>
+                </form>
+            </section>
+            <a data-optimize-registration-step1-agegate-cta-login="true"
+               href="/login">Already a member? Log in here.</a></div>
+    </div>
+</div>
+
+</body>
+</html>

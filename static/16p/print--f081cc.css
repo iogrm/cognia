@@ -1,0 +1,76 @@
+@media print and (min-width: 0) {
+    a, main.articles.view .article-content a {
+        color: #000;
+        font-weight: 600;
+        text-decoration: underline !important
+    }
+
+    #footer .footer__links, .comments-wrapper.comp, .footer__social, .navigation-buttons.comp, .print--hide, .social, .social-cta.comp, .sp-nav__mobiletoggle, .type-info .difference, main.articles.view .cta, nav.bottom, nav.top-tabs.mobile-only {
+        display: none !important
+    }
+
+    article ul:not(.pagination) > li {
+        background: 0 0;
+        list-style: square;
+        padding-left: 0
+    }
+
+    #footer {
+        padding-bottom: 0;
+        padding-top: 40px
+    }
+
+    #footer .footer__copyright {
+        margin-bottom: 0
+    }
+
+    .q-td article.main.description .number {
+        font-size: 1em;
+        left: auto;
+        right: 0;
+        top: .8in
+    }
+
+    .q-td .description-pullout {
+        -webkit-clip-path: none;
+        clip-path: none
+    }
+
+    .q-td .celebrities h2 {
+        padding: 0;
+        text-align: left
+    }
+
+    .q-td .celebrities .celebrities-wrapper .avatar, .q-td .celebrities .celebrities-wrapper .carousel-nav, .q-td .celebrities .celebrities-wrapper .why {
+        display: none
+    }
+
+    .q-td .celebrities .celebrities-wrapper .carousel-wrapper > div {
+        flex-wrap: wrap !important;
+        max-height: none !important;
+        width: auto !important
+    }
+
+    .q-td .celebrities .celebrities-wrapper .carousel-wrapper > div > div {
+        width: 50% !important
+    }
+
+    .q-td .celebrities .celebrities-wrapper .celebrity {
+        align-items: start;
+        margin-bottom: 20px;
+        width: auto !important
+    }
+
+    .q-td .celebrities .celebrities-wrapper .celebrity .movie, .q-td .celebrities .celebrities-wrapper .celebrity .name {
+        text-align: left;
+        width: auto !important
+    }
+
+    .q-td .celebrities .celebrities-wrapper .celebrity .movie:before {
+        content: "("
+    }
+
+    .q-td .celebrities .celebrities-wrapper .celebrity .movie:after {
+        content: ")"
+    }
+}

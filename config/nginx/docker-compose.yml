@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - uniform_static_volume:/uniform/static
+      - uniform_files_volume:/uniform/files
+    networks:
+      - nginx_network
+
+volumes:
+  uniform_static_volume:
+    external: true
+  uniform_files_volume:
+    external: true
+
+networks:
+  nginx_network:
+    external: true
