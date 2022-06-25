@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'uniform.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
+        'NAME': 'postgresql',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'PASSWORD': '0fL7PAs1ET84rKBR48qDqNLKgau1yBDF',
+        'HOST': 'postgresql-0',
         'PORT': '5432',
     }
 }

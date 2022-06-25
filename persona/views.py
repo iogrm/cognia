@@ -60,16 +60,21 @@ class LoginPage(TemplateView):
             'span_email_style': "display: none;",
         }
         if form.is_valid():
-            print("is valid")
+            print("login: form is valid")
             email = form.cleaned_data.get("email")
-            users = UserProfile.objects.filter(email__contains=email)
-            if users:
-                user = LoginForm()
-                user.email = email
+            user = UserProfile.objects.filter(email__contains=email)[0]
+            if user:
+                # user = LoginForm()
+                # user.email = email
                 request.session['email'] = email
-                return redirect('home')
+                print("login mbti: ", user.mbti.mbti)
+                if user.mbti.mbti == "xxxx":
+                    print('login to test: xxxx')
+                    return redirect('test')
+                else:
+                    print('login to passport')
+                    return redirect('passport')
             else:
-                print('else users:')
                 print(form.errors)
                 error_css = {
                     'input_email_class': "error",
@@ -86,14 +91,13 @@ class LoginPage(TemplateView):
 class PassportPage(TemplateView):
     def get(self, request, **kwargs):
         print()
-        print('passport:')
         user_data = []
         character_data = []
         email = request.session.get('email')
         users = UserProfile.objects.filter(email__contains=email)
         user = users[0]
         mbti = user.mbti
-        print(mbti)
+        print('passport: ', email, user, user.mbti.mbti)
         mbti = Mbti.objects.filter(mbti=mbti)[0]
         user_data.append({
             'email': user.email,
@@ -178,7 +182,7 @@ def test_page(request):
         request.session['email'] = email
         user.mbti = Mbti.objects.filter(mbti__contains=analyzed_mbti)[0]
         user.save()
-        return redirect('home')
+        return redirect('passport')
     else:
         questions = Question.objects.all()
         context = {
