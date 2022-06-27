@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 
-from uniform import settings
+from cognia import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
