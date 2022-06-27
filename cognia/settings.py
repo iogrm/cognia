@@ -76,26 +76,26 @@ WSGI_APPLICATION = 'uniform.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'postgres',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgresql',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': '0fL7PAs1ET84rKBR48qDqNLKgau1yBDF',
-        'HOST': 'postgresql-0',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgresql',
+#         'USER': 'postgres',
+#         'PASSWORD': '0fL7PAs1ET84rKBR48qDqNLKgau1yBDF',
+#         'HOST': 'postgresql',
+#         'PORT': '5432',
+#     }
+# }
 
 
 
