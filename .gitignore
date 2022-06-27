@@ -1,0 +1,15 @@
+#MAC Staff
+.DS_Store
+.idea
+
+#Virtual Env
+venv
+
+#
+files
+
+#DB
+.env
+
+#Migrations
+persona/migrations/
